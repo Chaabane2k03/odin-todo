@@ -3,10 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
     <script src="./main.js"></script>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+
+    <!--Icons link-->
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-    
+    <!--The header -->
+    <header>
+        <div id="container" style="white-space:nowrap">
+
+            <div id="image" style="display:inline;">
+                <img class="odin-logo" src="../images/odin-logo.png"/>
+            </div>
+        
+            <h1 id="texts" style="display:inline; white-space:nowrap;"> 
+               The Odin ToDO App
+            </h1>
+        
+        </div>
+        
+    </header>
+    <!--The body : The nav and the tasks (Left)-->
+    <main>
+        <nav class="nav" id="nav">
+            <button type="button" class="btn btn-warning btn-lg odin-btn">
+                <i class="fas fa-inbox"></i>
+                Inbox
+            </button>
+            <button type="button" class="btn btn-warning btn-lg odin-btn">
+                <i class="fas fa-calendar-day"></i>
+            Today</button>
+            <button type="button" class="btn btn-warning btn-lg odin-btn"><i class="fas fa-calendar-week"></i>
+                This week</button>
+
+
+            <h1 class="projects-title">Projects :</h1>
+            
+            <button type="button" class="btn btn-danger btn-lg odin-btn"><i class="fas fa-plus"></i>
+                add a project</button>
+            
+            <div class="add-project-popup" id="add-project-popup">
+                
+            </div>
+        </nav>
+
+
+        
+
+        <!--The tasks for the user : (Right)-->
+        <div class="project-preview" id="project-preview">
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>

@@ -1,0 +1,41 @@
+
+/*Styling the header page : The image and the text*/
+.odin-logo{
+    width : 5%;
+    height : 4%;
+    margin : 5px;
+}
+
+#texts{
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    position : absolute;
+    top : 15px;
+}
+
+/*Styling the main*/
+.main {
+    display: flex;
+    /* navbar support */
+    min-height: calc(100vh - 104px - 48px); /*  - header_height - footer_height */
+}
+
+.nav {
+    width: 300px;
+    min-width: 250px;
+    padding: 20px;
+}
+
+.odin-btn{
+    width : 100%;
+    margin : 2%;
+}
+
+.projects-title{
+    font-family: "LXGW WenKai TC", cursive;
+    font-weight: 400;
+    font-size: 30px;
+    font-style: normal;
+    margin : 5%;
+}

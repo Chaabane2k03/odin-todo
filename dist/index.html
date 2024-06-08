@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" >
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
     <script src="./main.js"></script>
@@ -58,21 +59,44 @@
                 add a project</button>
             
             <div class="add-project-popup" id="add-project-popup">
-                
+                <!--Pop up when we click the button-->
             </div>
         </nav>
 
 
-        
-
         <!--The tasks for the user : (Right)-->
         <div class="project-preview" id="project-preview">
-
+        
         </div>
     </main>
 
     <footer>
 
+        <p>Made with love <i class="fa fa-heart" ></i>
+        by Chaabane2k03 </p>
+
+
+        <!--Adding a button that refe to msg in bootstrap-->
+        
+        <button type="button" class="btn btn-warning" id="liveToastBtn">View my other projects</button>
+
+        <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="fa fa-github"></i>
+            
+            
+            <strong class="me-auto">The Odin ToDO</strong>
+            <small>Just Now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Please visit our GitHub page :
+            <a href="https://github.com/Chaabane2k03">Chaabane2k03</a>
+        </div>
+        <script src="../src/style.js"></script>
+  </div>
+</div>
     </footer>
 </body>
 </html>

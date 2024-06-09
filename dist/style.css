@@ -34,6 +34,7 @@ main {
 .odin-btn{
     width : 100%;
     margin : 2%;
+    
 }
 
 .projects-title{
@@ -63,6 +64,24 @@ main {
 
 .odin-btn-popup:hover{
     background-color: rgb(219, 161, 65);
+}
+
+.projects-list{
+    width : 250px;
+}
+
+.odin-added-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+.right-project-panel {
+    visibility: hidden;
+}
+  
+.odin-added-btn:hover .right-project-panel {
+    visibility: visible;
 }
 /*right */
 .project-preview {
@@ -94,6 +113,8 @@ main {
     margin-top : 2%;
     /*display: none;*/ 
 }
+
+
 /*Footer*/
 
 footer{

@@ -15,18 +15,22 @@
 }
 
 /*Styling the main*/
-.main {
+main {
     display: flex;
     /* navbar support */
-    min-height: calc(100vh - 104px - 48px); /*  - header_height - footer_height */
 }
 
 .nav {
     width: 300px;
     min-width: 250px;
     padding: 20px;
+    position : absolute;
 }
-
+.add-project-popup{
+    width: 250px;
+    min-width: 250px;
+    
+}
 .odin-btn{
     width : 100%;
     margin : 2%;
@@ -39,8 +43,57 @@
     font-style: normal;
     margin : 5%;
 }
+/*The input of the project popup*/
+.input-add-project-popup{
+    width: 100%;
+    margin : 2%;
+}
 
+.add-project-popup-buttons{
+    display : flex;
+    justify-content: space-between;
+    margin-left : 45%;
+    padding: 10px;
+}
 
+.odin-btn-popup{
+    background-color: rgb(227, 178, 97);
+    margin: 2px;
+}
+
+.odin-btn-popup:hover{
+    background-color: rgb(219, 161, 65);
+}
+/*right */
+.project-preview {
+    width: 77%;
+    height : 550px;
+    padding: 20px 40px;
+    margin: 0 auto;
+    background-color: rgb(238, 217, 195); /*This is Just temporary for styling */
+    margin-left : 21%;
+    margin-top: 1%;
+    border-radius: 2%;
+}
+
+.project-name{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.button-add-task{
+    width : 15%;
+}
+
+.add-task-input-popup{
+    background-color: white;
+    border-radius: 10%;
+    margin-top : 2%;
+    /*display: none;*/ 
+}
 /*Footer*/
 
 footer{

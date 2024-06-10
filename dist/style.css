@@ -111,8 +111,99 @@ main {
     background-color: white;
     border-radius: 10%;
     margin-top : 2%;
-    /*display: none;*/ 
+    display: none;
 }
+
+.button-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: default;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+    background-color: white;
+  }
+  
+  .button-task:hover {
+    background-color: bisque;
+  }
+  
+  .left-task-panel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fa-circle {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .task-content {
+    cursor: pointer;
+    margin : 10px;
+  }
+  
+  .task-content.active {
+    display: none;
+  }
+  
+  .input-task-name {
+    display: none;
+    height: 24px;
+    padding: 5px;
+    border: 1px solid #555;
+    color: inherit;
+    font-family: inherit;
+  }
+  
+  .input-task-name.active {
+    display: block;
+  }
+  
+  .right-task-panel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .due-date {
+    margin : 10px;
+    cursor: pointer;
+    text-align : right;
+
+  }
+  
+  .due-date.active {
+    display: none;
+  }
+  
+  .input-due-date {
+    display: none;
+    height: 24px;
+    padding: 5px;
+    border: 1px solid #555;
+    margin: 0 10px;
+ 
+    color: inherit;
+    font-family: inherit;
+  }
+  
+  .input-due-date.active {
+    display: block;
+  }
+  
+  .button-task .right-task-panel i {
+    visibility: hidden;
+    cursor: pointer;
+  }
+  
+  .button-task:hover .right-task-panel i {
+    visibility: visible;
+  }
+  
+ 
+
 
 
 /*Footer*/

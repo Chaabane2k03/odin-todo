@@ -50,10 +50,10 @@
                 <i class="fas fa-inbox"></i>
                 Inbox
             </button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn">
+            <button type="button" class="btn btn-warning btn-lg odin-btn" id="button-today-projects">
                 <i class="fas fa-calendar-day"></i>
             Today</button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn"><i class="fas fa-calendar-week"></i>
+            <button type="button" class="btn btn-warning btn-lg odin-btn" id="button-week-projects"><i class="fas fa-calendar-week"></i>
                 This week</button>
 
 
@@ -73,17 +73,19 @@
                 </button>
             </div>
 
-            <button type="button" class="btn btn-danger btn-lg odin-btn"><i class="fas fa-plus"></i>
+            <button type="button" class="btn btn-danger btn-lg odin-btn" id="button-add-project"><i class="fas fa-plus"></i>
                 add a project</button>
             
             <div class="add-project-popup" id="add-project-popup">
                 <!--Pop up when we click the button-->
                 <input type="text" class="input-add-project-popup form-control" id="input-add-project-popup"  placeholder="my new Project"/>
                 <div class="add-project-popup-buttons">
-                    <button type="button" class="btn odin-btn-popup" >Add</button>
-                    <button type="button" class="btn odin-btn-popup">Cancel</button>
+                    <button type="button" class="btn odin-btn-popup" id='button-add-project-popup'>Add</button>
+                    <button type="button" class="btn odin-btn-popup" id="button-cancel-project-popup'">Cancel</button>
                 </div>
             </div>
+
+            
         </nav>
 
 
@@ -102,6 +104,9 @@
                 <button class="btn btn-outline-success" type="button">Add</button>
                 <button class="btn btn-outline-danger" type="button">Cancel</button>
             </div>
+
+
+            
 
         </div>
         

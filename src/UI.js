@@ -80,7 +80,7 @@ export default class UI{
     static createProject(name){
         const userProjects = document.getElementById('projects-list')
         userProjects.innerHTML += `
-        <button type="button" class="btn btn-danger btn-lg odin-btn odin-added-btn">       
+        <button type="button" class="btn btn-danger btn-lg odin-btn odin-added-btn button-project">       
             <div class="left-project-panel">
                 <i class="fas fa-check"></i>
                 <span>${name}</span>
@@ -275,8 +275,83 @@ export default class UI{
     }
     
     //275
+    static openProject(projectName,projectButton){
+        const defaultProjectButtons = document.querySelectorAll('.button-default-project')
+        const projectButtons = document.querySelectorAll('.button-project')
+        const buttons = [...defaultProjectButtons , ...projectButtons]
 
+        buttons.forEach((button) => button.classList.remove('active'))
+        projectButton.classList.add('active')
+        UI.closeAddProjectPopup()
+        UI.loadProjectContent(projectName)
+
+    }
+
+    static deleteProject(projectName, button){
+        if(button.classList.contains('active')) UI.clearProjectPreview()
+        Storage.deleteProject(projectName)
+        UI.clearProjects()
+        UI.loadProjects()
+    }
+
+    static initAddTaskButtons() {
+        const addTaskButton = document.getElementById('button-add-task')
+        const addTaskPopupButton = document.getElementById('button-add-task-popup')
+        const cancelTaskPopupButton = document.getElementById(
+          'button-cancel-task-popup'
+        )
+        const addTaskPopupInput = document.getElementById('input-add-task-popup')
+    
+        addTaskButton.addEventListener('click', UI.openAddTaskPopup)
+        addTaskPopupButton.addEventListener('click', UI.addTask)
+        cancelTaskPopupButton.addEventListener('click', UI.closeAddTaskPopup)
+        addTaskPopupInput.addEventListener('keypress', UI.handleAddTaskPopupInput)
+      }
+
+      static handleAddTaskPopupInput(e) {
+        if (e.key === 'Enter') UI.addTask()
+      }
+    
+      static openAddTaskPopup() {
+        const addTaskPopup = document.getElementById('add-task-popup')
+        const addTaskButton = document.getElementById('button-add-task')
+    
+        UI.closeAllPopups()
+        addTaskPopup.classList.add('active')
+        addTaskButton.classList.add('active')
+      }
+
+      static closeAddTaskPopup() {
+        const addTaskPopup = document.getElementById('add-task-popup')
+        const addTaskButton = document.getElementById('button-add-task')
+        const addTaskInput = document.getElementById('input-add-task-popup')
+    
+        addTaskPopup.classList.remove('active')
+        addTaskButton.classList.remove('active')
+        addTaskInput.value = ''
+      }
+
+    static addTask() {
+        const projectName = document.getElementById('project-name').textContent
+        const addTaskPopupInput = document.getElementById('input-add-task-popup')
+        const taskName = addTaskPopupInput.value
+    
+        if (taskName === '') {
+          alert("Task name can't be empty")
+          return
+        }
+        if (Storage.getTodoList().getProject(projectName).contains(taskName)) {
+          alert('Task names must be different')
+          addTaskPopupInput.value = ''
+          return
+        }
+    
+        Storage.addTask(projectName, new Task(taskName))
+        UI.createTask(taskName, 'No date')
+        UI.closeAddTaskPopup()
+    }
     //Project Buttons :
+    
     //Task Buttons :
 
 }

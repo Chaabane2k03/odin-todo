@@ -3,45 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
-    <title>The Odin ToDO</title>
-    <script src="./main.js"></script>
+    <title>The Odin ToDo</title>
+    <script src="./main.js" defer></script>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,486&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=LXGW+WenKai+TC&family=Montserrat:ital,wght@1,486&display=swap" rel="stylesheet">
     <!--Icons link-->
-    <script
-      src="https://kit.fontawesome.com/4c536a6bd5.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!--The header -->
     <header>
         <div id="container" style="white-space:nowrap">
-
             <div id="image" style="display:inline;">
-                <img class="odin-logo" src="../images/odin-logo.png"/>
+                <img class="odin-logo" src="../images/odin-logo.png" alt="Odin Logo"/>
             </div>
-        
             <h1 id="texts" style="display:inline; white-space:nowrap;"> 
-               The Odin ToDO App
+               The Odin ToDo App
             </h1>
-        
         </div>
-        
     </header>
     <!--The body : The nav and the tasks (Left)-->
     <main>
@@ -50,95 +34,63 @@
                 <i class="fas fa-inbox"></i>
                 Inbox
             </button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project" id="button-today-projects">
-                <i class="fas fa-calendar-day"></i>
-            Today</button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project" id="button-week-projects"><i class="fas fa-calendar-week"></i>
-                This week</button>
-
-
+            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-today-projects">
+                <i class="fas fa-calendar-day"></i> Today
+            </button>
+            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-week-projects">
+                <i class="fas fa-calendar-week"></i> This week
+            </button>
             <h1 class="projects-title">Projects :</h1>
-
             <div class="projects-list" id="projects-list">
-                <!--User project list : exemple  -->
-                <button type="button" class="btn btn-danger btn-lg odin-btn odin-added-btn">
-                    
-                    <div class="left-project-panel">
-                        <i class="fas fa-check"></i>
-                        <span>Summer Vacation</span>
-                    </div>
-                    <div class="right-project-panel">
-                        <i class="fas fa-times"></i>
-                    </div>
-                </button>
+                <!--User project list : example  -->
+                
             </div>
-
-            <button type="button" class="btn btn-danger btn-lg odin-btn" id="button-add-project"><i class="fas fa-plus"></i>
-                add a project</button>
-            
-            <div class="add-project-popup" id="add-project-popup">
+            <button type="button" class="btn btn-danger btn-lg odin-btn" id="button-add-project">
+                <i class="fas fa-plus"></i> Add a project
+            </button>
+            <div class="add-project-popup" id="add-project-popup" style="display: none;">
                 <!--Pop up when we click the button-->
-                <input type="text" class="input-add-project-popup form-control" id="input-add-project-popup"  placeholder="my new Project"/>
+                <input type="text" class="input-add-project-popup form-control" id="input-add-project-popup" placeholder="My new project"/>
                 <div class="add-project-popup-buttons">
-                    <button type="button" class="btn odin-btn-popup" id='button-add-project-popup'>Add</button>
-                    <button type="button" class="btn odin-btn-popup" id="button-cancel-project-popup'">Cancel</button>
+                    <button type="button" class="btn odin-btn-popup" id="button-add-project-popup">Add</button>
+                    <button type="button" class="btn odin-btn-popup" id="button-cancel-project-popup">Cancel</button>
                 </div>
             </div>
-
-            
         </nav>
-
-
         <!--The tasks for the user : (Right)-->
         <div class="project-preview" id="project-preview">
             <h1 id="project-name" class="project-name">Today</h1>
             <div class="add-task-popup">
                 <button class="button-add-task btn btn-outline-secondary" id="button-add-task">
-                    <i class="fas fa-plus"></i>
-                    Add Task
+                    <i class="fas fa-plus"></i> Add Task
                 </button>
             </div>
-
             <div class="input-group add-task-input-popup">
-                <input type="text" class="form-control" placeholder="Hang out with friends" aria-label="Recipient's username with two button addons">
+                <input type="text" class="form-control" placeholder="Hang out with friends" aria-label="Task input">
                 <button class="btn btn-outline-success" type="button">Add</button>
                 <button class="btn btn-outline-danger" type="button">Cancel</button>
             </div>
-
-
-            
-
         </div>
-        
     </main>
-
     <footer>
-
-        <p>Made with love <i class="fa fa-heart" ></i>
-        by Chaabane2k03 </p>
-
-
-        <!--Adding a button that refe to msg in bootstrap-->
-        
+        <p>Made with love <i class="fa fa-heart"></i> by Chaabane2k03</p>
+        <!--Adding a button that refers to msg in bootstrap-->
         <button type="button" class="btn btn-warning" id="liveToastBtn">View my other projects</button>
-
         <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
-        <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-            <i class="fa fa-github"></i>
-            
-            
-            <strong class="me-auto">The Odin ToDO</strong>
-            <small>Just Now</small>
-            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-        </div>
-        <div class="toast-body">
-            Please visit our GitHub page :
-            <a href="https://github.com/Chaabane2k03">Chaabane2k03</a>
+            <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <i class="fa fa-github"></i>
+                    <strong class="me-auto">The Odin ToDo</strong>
+                    <small>Just Now</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    Please visit our GitHub page :
+                    <a href="https://github.com/Chaabane2k03">Chaabane2k03</a>
+                </div>
+            </div>
         </div>
         <script src="../src/style.js"></script>
-  </div>
-</div>
     </footer>
 </body>
 </html>

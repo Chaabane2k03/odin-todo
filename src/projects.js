@@ -1,3 +1,4 @@
+//Loading projects from JSON to Html
 export function loadProjects() {
     const projects = JSON.parse(localStorage.getItem('projects')) || [];
     projects.forEach(function(projectName) {
@@ -5,18 +6,22 @@ export function loadProjects() {
     });
 }
 
+
+//adding project after writing the project name
 export function addProjectFromInput(projectName) {
     addProject(projectName);
     saveProjects();
 }
 
+//The addproject method : it adds the projects in HTML
 function addProject(projectName) {
     const projectsList = document.getElementById('projects-list');
 
     // Create a new project button
     const newProjectButton = document.createElement('button');
     newProjectButton.type = 'button';
-    newProjectButton.className = 'btn btn-danger btn-lg odin-btn odin-added-btn';
+    newProjectButton.className = `btn btn-danger btn-lg odin-btn odin-added-btn button-default-project`;
+    newProjectButton.setAttribute('data-project-name',projectName)
     newProjectButton.innerHTML = `
         <div class="left-project-panel">
             <i class="fas fa-check"></i>
@@ -37,6 +42,7 @@ function addProject(projectName) {
     projectsList.appendChild(newProjectButton);
 }
 
+//Saving the project in the JSON : 
 function saveProjects() {
     const projectsList = document.getElementById('projects-list');
     const projects = [];

@@ -30,14 +30,14 @@
     <!--The body : The nav and the tasks (Left)-->
     <main>
         <nav class="nav" id="nav">
-            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project" id="button-index-projects">
+            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project" id="button-index-projects" data-project-name="Inbox">
                 <i class="fas fa-inbox"></i>
                 Inbox
             </button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-today-projects">
+            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-today-projects" data-project-name="Today">
                 <i class="fas fa-calendar-day"></i> Today
             </button>
-            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-week-projects">
+            <button type="button" class="btn btn-warning btn-lg odin-btn button-default-project " id="button-week-projects" data-project-name="This week">
                 <i class="fas fa-calendar-week"></i> This week
             </button>
             <h1 class="projects-title">Projects :</h1>
@@ -59,7 +59,7 @@
         </nav>
         <!--The tasks for the user : (Right)-->
         <div class="project-preview" id="project-preview">
-            <h1 id="project-name" class="project-name">Today</h1>
+            <h1 id="project-name" class="project-name"></h1>
             <div class="add-task-popup">
                 <button class="button-add-task btn btn-outline-secondary" id="button-add-task">
                     <i class="fas fa-plus"></i> Add Task
